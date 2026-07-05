@@ -1,0 +1,16 @@
+{
+  "curriculum": [
+    {
+      "grade": 6,
+      "levels": [
+        { "id": 1, "topic": "Fractions", "difficulty": "easy" }
+      ]
+    },
+    {
+      "grade": 7,
+      "levels": [
+        { "id": 1, "topic": "Algebra", "difficulty": "medium" }
+      ]
+    }
+  ]
+}
