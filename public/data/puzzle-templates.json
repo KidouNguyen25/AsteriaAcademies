@@ -1,0 +1,27 @@
+[
+  {
+    "id": "fraction_reservoir_compare",
+    "mechanic": "observation_compare",
+    "description": "Compare fractions from multiple reservoirs from an observation platform."
+  },
+  {
+    "id": "fraction_equivalent_valves",
+    "mechanic": "valve_match",
+    "description": "Choose the valve connected to an equivalent fraction."
+  },
+  {
+    "id": "number_multiples_lamps",
+    "mechanic": "lamp_sequence",
+    "description": "Light up the correct sequence of number lamps based on multiples of a base number."
+  },
+  {
+    "id": "number_common_factor_gate",
+    "mechanic": "stone_gate_lock",
+    "description": "Unlock a stone gate by finding common factors of given numbers."
+  },
+  {
+    "id": "number_divisibility_observation_path",
+    "mechanic": "path_logic",
+    "description": "Observe numbers from a tower and determine a safe path based on divisibility rules."
+  }
+]

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.projectmem/events.jsonl
+.projectmem/watch.pid
+.projectmem/watch.log

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "prob_g6_frac_rec_01",
+    "nodeId": "g6_fraction_recognize",
+    "tier": 1,
+    "templateId": "fraction_equivalent_valves",
+    "data": {
+      "numerator": 1,
+      "denominator": 2,
+      "visualType": "reservoir",
+      "options": ["1/4", "1/2", "3/4"]
+    }
+  },
+  {
+    "id": "prob_g6_frac_eq_01",
+    "nodeId": "g6_fraction_equivalent",
+    "tier": 2,
+    "templateId": "fraction_equivalent_valves",
+    "data": {
+      "baseFraction": "1/2",
+      "targetFraction": "2/4",
+      "visualType": "valves",
+      "options": ["2/4", "3/8", "1/3"]
+    }
+  },
+  {
+    "id": "prob_g6_frac_comp_01",
+    "nodeId": "g6_fraction_compare",
+    "tier": 3,
+    "templateId": "fraction_reservoir_compare",
+    "data": {
+      "reservoirs": [
+        { "id": "A", "fraction": "4/6" },
+        { "id": "B", "fraction": "5/8" },
+        { "id": "C", "fraction": "3/5" }
+      ],
+      "question": "Which reservoir contains the most energy?",
+      "correctOptionId": "A"
+    }
+  },
+  {
+    "id": "prob_g6_num_mult_01",
+    "nodeId": "g6_number_multiples",
+    "tier": 1,
+    "templateId": "number_multiples_lamps",
+    "data": {
+      "baseNumber": 4,
+      "lamps": [4, 8, 10, 12, 14, 16],
+      "correctSequence": [4, 8, 12, 16]
+    }
+  },
+  {
+    "id": "prob_g6_num_cf_01",
+    "nodeId": "g6_number_common_factors",
+    "tier": 2,
+    "templateId": "number_common_factor_gate",
+    "data": {
+      "numbers": [12, 18],
+      "gateLocks": [1, 2, 3, 4, 6, 9],
+      "correctKeys": [1, 2, 3, 6]
+    }
+  },
+  {
+    "id": "prob_g6_num_div_01",
+    "nodeId": "g6_number_divisibility_logic",
+    "tier": 3,
+    "templateId": "number_divisibility_observation_path",
+    "data": {
+      "pathNumbers": [15, 22, 30, 45, 50],
+      "rule": "Divisible by both 3 and 5",
+      "correctPath": [15, 30, 45]
+    }
+  }
+]

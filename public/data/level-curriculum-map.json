@@ -1,0 +1,52 @@
+{
+  "levels": [
+    {
+      "id": "g6_fraction_reservoir_01",
+      "academy": "Foundation Academy",
+      "district": "Fraction Reservoir",
+      "curriculumNodes": [
+        "g6_fraction_recognize",
+        "g6_fraction_equivalent",
+        "g6_fraction_compare"
+      ],
+      "puzzles": [
+        {
+          "puzzleId": "prob_g6_frac_rec_01",
+          "mapObjectId": "valve_recognize"
+        },
+        {
+          "puzzleId": "prob_g6_frac_eq_01",
+          "mapObjectId": "valve_equivalent"
+        },
+        {
+          "puzzleId": "prob_g6_frac_comp_01",
+          "mapObjectId": "valve_compare"
+        }
+      ]
+    },
+    {
+      "id": "g6_number_gate_01",
+      "academy": "Foundation Academy",
+      "district": "Number Gate",
+      "curriculumNodes": [
+        "g6_number_multiples",
+        "g6_number_common_factors",
+        "g6_number_divisibility_logic"
+      ],
+      "puzzles": [
+        {
+          "puzzleId": "prob_g6_num_mult_01",
+          "mapObjectId": "lamp_multiples"
+        },
+        {
+          "puzzleId": "prob_g6_num_cf_01",
+          "mapObjectId": "gate_common_factors"
+        },
+        {
+          "puzzleId": "prob_g6_num_div_01",
+          "mapObjectId": "tower_divisibility_path"
+        }
+      ]
+    }
+  ]
+}

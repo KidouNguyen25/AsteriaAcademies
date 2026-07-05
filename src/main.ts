@@ -1,32 +1,24 @@
-import * as THREE from 'three';
+import './styles/main.css';
+import { problemBank } from './puzzles/ProblemBank';
+import { Game } from './game/Game';
+import { academyIntro } from './ui/AcademyIntro';
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-camera.position.z = 5;
-
-function animate() {
-  requestAnimationFrame(animate);
-
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
-
-  renderer.render(scene, camera);
+async function bootstrap() {
+  // Load data
+  await problemBank.load('./data/problem-bank-grade-6.json');
+  
+  const mapDataRes = await fetch('./data/level-curriculum-map.json');
+  const mapData = await mapDataRes.json();
+  
+  // Init game
+  const game = new Game();
+  game.levelManager.setMapData(mapData);
+  game.init();
+  
+  // Show intro
+  academyIntro.show(() => {
+    game.start();
+  });
 }
 
-animate();
-
-window.addEventListener('resize', () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-});
+bootstrap().catch(console.error);

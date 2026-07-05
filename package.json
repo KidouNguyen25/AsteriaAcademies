@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit:curriculum": "npx tsx tools/curriculum-audit/check-coverage.ts"
   },
   "devDependencies": {
     "@types/three": "^0.185.0",
